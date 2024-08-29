@@ -18,7 +18,16 @@ let booksObj = {};
 function convert(keyArr, valueArr){
     
     // Add code here
+    // Step 1: Create a local scoped object literal.
+    let resultobj={};
+    // Step 2: Define a for-loop that run based on keyArr's length.
+    for (i=0; i<keyArr.length;i++){
+        resultobj[keyArr[i]]=valueArr[i];
+    
+    }
+    return resultobj;
     /*
+    
         Tips:
         - Step 1: Create a local scoped object literal.
         - Step 2: Define a for-loop that run based on keyArr's length.
@@ -38,3 +47,5 @@ printByKey("NLB2"); // prints "Progamming for Dummies"
 module.exports = {
     convert
 }
+
+//reference link : https://htmlcheatsheet.com/js/
